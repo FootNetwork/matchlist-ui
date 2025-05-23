@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://footnetwork.github.io/matchlist-ui/sitemap.xml
