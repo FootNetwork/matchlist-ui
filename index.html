@@ -1,4 +1,6 @@
+# Generate a full index.html with ALL match blocks, and every `.match` block fully clickable using the redirectMatch JS function
 
+full_html = """
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -57,7 +59,7 @@
     </div>
   </div>
 
-  <div class="match">
+  <div class="match" onclick="redirectMatch(event, 'https://foothub.xyz/update/current')">
     <div class="teams">Current Match Updates</div>
     <div class="links">
       <a class="link" href="https://foothub.xyz/update/current" target="_blank">Details</a>
@@ -67,7 +69,46 @@
 
   <h1>Upcoming Matches (May 27–31)</h1>
 
-  <!-- Remaining matches omitted for brevity; user can paste them back in -->
+  <div class="match" onclick="redirectMatch(event, 'watch.html')">
+    <div class="teams">Real Betis vs Chelsea – May 28, 2025</div>
+    <div class="links">
+      <a class="link" href="watch.html" target="_blank">Watch</a>
+      <a class="link" href="watch.html" target="_blank">Backup</a>
+      <a class="link" href="#" target="_blank">Alternate</a>
+    </div>
+  </div>
+
+  <div class="match" onclick="redirectMatch(event, 'watch.html')">
+    <div class="teams">Paris Saint-Germain vs Inter Milan – May 31, 2025</div>
+    <div class="links">
+      <a class="link" href="watch.html" target="_blank">Watch</a>
+      <a class="link" href="watch.html" target="_blank">Backup</a>
+      <a class="link" href="#" target="_blank">Alternate</a>
+    </div>
+  </div>
+
+  <div class="match" onclick="redirectMatch(event, 'watch.html')">
+    <div class="teams">Tottenham vs Manchester United – Europa League Recap</div>
+    <div class="links">
+      <a class="link" href="watch.html" target="_blank">Watch Recap</a>
+      <a class="link" href="watch.html" target="_blank">Backup</a>
+    </div>
+  </div>
+
+  <div class="match" onclick="redirectMatch(event, 'watch.html')">
+    <div class="teams">Greek Super League Recap & Highlights</div>
+    <div class="links">
+      <a class="link" href="watch.html" target="_blank">Watch</a>
+      <a class="link" href="watch.html" target="_blank">Backup</a>
+    </div>
+  </div>
+
+  <div class="match" onclick="redirectMatch(event, 'https://foothub.xyz/results/2025')">
+    <div class="teams">Greek Super League 2025 Results</div>
+    <div class="links">
+      <a class="link" href="https://foothub.xyz/results/2025" target="_blank">View</a>
+    </div>
+  </div>
 
   <p style="max-width: 700px; margin: 40px auto 0; font-size: 0.9em; color: #888;">
     Curated for layout preview and mirror fallback testing only.  
@@ -85,3 +126,8 @@
   </script>
 </body>
 </html>
+"""
+
+output_file = "/mnt/data/index-clickable-all.html"
+Path(output_file).write_text(full_html)
+output_file
