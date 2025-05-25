@@ -39,7 +39,7 @@
   <p>Redirecting in <span id="countdown">5</span> seconds...</p>
 
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
+    window.addEventListener("load", function () {
       const params = new URLSearchParams(window.location.search);
       const target = params.get("redirect") || "https://foothub.xyz/streams/entry";
 
