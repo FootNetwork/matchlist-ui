@@ -1,6 +1,3 @@
-# Generate a full index.html with ALL match blocks, and every `.match` block fully clickable using the redirectMatch JS function
-
-full_html = """
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -126,8 +123,3 @@ full_html = """
   </script>
 </body>
 </html>
-"""
-
-output_file = "/mnt/data/index-clickable-all.html"
-Path(output_file).write_text(full_html)
-output_file
