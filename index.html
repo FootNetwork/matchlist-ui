@@ -64,7 +64,7 @@
       <a class="link" href="https://foothub.xyz/update/current-recap" target="_blank">Recap</a>
     </div>
   </div>
-<br>
+
   <h1>Upcoming Matches (May 27–31)</h1>
 
   <div class="match" onclick="redirectMatch(event, 'watch.html')">
@@ -118,7 +118,7 @@
   <script>
     function redirectMatch(e, url) {
       if (!e.target.closest('a')) {
-        window.open(url, '_blank');
+        window.location.href = url;
       }
     }
   </script>
